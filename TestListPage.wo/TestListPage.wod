@@ -1,0 +1,15 @@
+DisplayList: WORepetition {item = knowtest; list = knowtestDisplayGroup.displayedObjects; };
+
+FooterComponent1: FooterComponent {
+}
+
+HeaderComponent1: HeaderComponent {
+}
+allottedTimeItem: WOString {value = knowtest.allottedTime;  };
+numberQuestionsItem: WOString {value = knowtest.numberQuestions;  };
+passingScoreItem: WOString {value = knowtest.passingScore;  };
+testBankCodeItem: WOString {value = knowtest.testBankCode;  };
+testCodeItem: WOString {value = knowtest.testCode;  };
+testNameItem: WOString {value = knowtest.testName;  };
+
+

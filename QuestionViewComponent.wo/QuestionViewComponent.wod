@@ -1,0 +1,43 @@
+String1: WOString {
+	value = question.knowTest.testBankName;
+}
+
+String10: WOString {
+	value = question.knowledgeCodes.subject;
+}
+
+String2: WOString {
+	value = question.questionNumber;
+}
+
+String3: WOString {
+	escapeHTML = false;
+	value = question.questionText;
+}
+
+String4: WOString {
+	escapeHTML = false;
+	value = question.answer1Text;
+}
+
+String5: WOString {
+	escapeHTML = false;
+	value = question.answer2Text;
+}
+
+String6: WOString {
+	escapeHTML = false;
+	value = question.answer3Text;
+}
+
+String7: WOString {
+	value = question.knowledgeCode;
+}
+
+String8: WOString {
+	value = question.knowledgeCodes.reference;
+}
+
+String9: WOString {
+	value = question.knowledgeCodes.section;
+}

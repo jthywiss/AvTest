@@ -1,0 +1,114 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = answer1Text; 
+            externalType = varchar; 
+            name = answer1Text; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1024; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = answer2Text; 
+            externalType = varchar; 
+            name = answer2Text; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1024; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = answer3Text; 
+            externalType = varchar; 
+            name = answer3Text; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1024; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = knowledgeCode; 
+            externalType = varchar; 
+            name = knowledgeCode; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 63; 
+        }, 
+        {
+            columnName = questionId; 
+            externalType = int; 
+            name = questionId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            columnName = questionNumber; 
+            externalType = int; 
+            name = questionNumber; 
+            precision = 10; 
+            valueClassName = NSNumber; 
+            valueType = l; 
+        }, 
+        {
+            columnName = questionText; 
+            externalType = varchar; 
+            name = questionText; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 1024; 
+        }, 
+        {
+            columnName = testBankId; 
+            externalType = int; 
+            name = testBankId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        questionText, 
+        answer1Text, 
+        questionNumber, 
+        answer2Text, 
+        answer3Text, 
+        knowledgeCode, 
+        testBankId, 
+        questionId
+    ); 
+    className = KnowTestQuestion; 
+    classProperties = (
+        questionText, 
+        answer1Text, 
+        questionNumber, 
+        answer2Text, 
+        answer3Text, 
+        knowledgeCode, 
+        testBankId, 
+        knowledgeCodes, 
+        knowTest, 
+        questionId
+    ); 
+    externalName = "Know_Test_Question"; 
+    isReadOnly = Y; 
+    name = KnowTestQuestion; 
+    primaryKeyAttributes = (questionId); 
+    relationships = (
+        {
+            destination = KnowTestBank; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = testBankId; sourceAttribute = testBankId; }); 
+            name = knowTest; 
+        }, 
+        {
+            destination = KnowledgeCode; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = code; sourceAttribute = knowledgeCode; }); 
+            name = knowledgeCodes; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = (FetchAll); 
+}

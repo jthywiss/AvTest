@@ -1,0 +1,93 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = allottedTime; 
+            externalType = double; 
+            name = allottedTime; 
+            valueClassName = NSNumber; 
+            valueType = d; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = minimumAge; 
+            externalType = int; 
+            name = minimumAge; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = numberQuestions; 
+            externalType = int; 
+            name = numberQuestions; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = passingScore; 
+            externalType = int; 
+            name = passingScore; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = testBankCode; 
+            externalType = char; 
+            name = testBankCode; 
+            valueClassName = NSString; 
+            width = 3; 
+        }, 
+        {
+            columnName = testCode; 
+            externalType = char; 
+            name = testCode; 
+            valueClassName = NSString; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = testName; 
+            externalType = varchar; 
+            name = testName; 
+            valueClassName = NSString; 
+            width = 255; 
+        }
+    ); 
+    attributesUsedForLocking = (
+        testCode, 
+        testName, 
+        numberQuestions, 
+        minimumAge, 
+        allottedTime, 
+        passingScore, 
+        testBankCode
+    ); 
+    className = KnowTest; 
+    classProperties = (
+        testCode, 
+        testName, 
+        numberQuestions, 
+        minimumAge, 
+        allottedTime, 
+        passingScore, 
+        testBankCode, 
+        knowTestBank
+    ); 
+    externalName = "Know_Test"; 
+    isReadOnly = Y; 
+    name = KnowTest; 
+    primaryKeyAttributes = (testCode); 
+    relationships = (
+        {
+            destination = KnowTestBank; 
+            isToMany = N; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = testBankCode; sourceAttribute = testBankCode; }); 
+            name = knowTestBank; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = (FetchAll); 
+}

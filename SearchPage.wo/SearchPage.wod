@@ -1,0 +1,35 @@
+DisplayList: WORepetition {item = knowtestquestion; list = knowtestquestionDisplayGroup.displayedObjects; };
+
+ExecuteQuery: WOSubmitButton {action = knowtestquestionDisplayGroup.qualifyDataSource; value = "Match"; };
+
+FooterComponent1: FooterComponent {
+}
+
+HeaderComponent1: HeaderComponent {
+}
+
+Hyperlink1: WOHyperlink {
+	action = selectQuestion;
+	fragmentIdentifier = "question";
+}
+
+QueryForm: WOForm {multipleSubmit = true; };
+
+QuestionViewComponent1: QuestionViewComponent {
+	question = knowtestquestionDisplayGroup.selectedObject;
+}
+answer1TextQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.answer1Text;  };
+answer2TextQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.answer2Text;  };
+answer3TextQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.answer3Text;  };
+knowTest.testBankCodeItem: WOString {value = knowtestquestion.knowTest.testBankCode;  };
+knowTest.testBankNameQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.knowTest.testBankName;  };
+knowledgeCodeItem: WOString {value = knowtestquestion.knowledgeCode;  };
+knowledgeCodeQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.knowledgeCode;  };
+knowledgeCodes.referenceQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.knowledgeCodes.reference;  };
+questionNumberItem: WOString {value = knowtestquestion.questionNumber;  };
+questionNumberQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.questionNumber;  };
+questionTextItem: WOString {value = knowtestquestion.questionText;  	escapeHTML = false;
+};
+questionTextQueryField: WOTextField { value = knowtestquestionDisplayGroup.queryMatch.questionText;  };
+
+

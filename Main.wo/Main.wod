@@ -1,0 +1,27 @@
+DisplayList: WORepetition {item = knowtestbank; list = knowtestbankDisplayGroup.displayedObjects; };
+
+FooterComponent1: FooterComponent {
+}
+
+HeaderComponent1: HeaderComponent {
+}
+
+Hyperlink1: WOHyperlink {
+	action = selectTestBank;
+}
+
+Hyperlink2: WOHyperlink {
+	pageName = "SearchPage";
+}
+
+Hyperlink3: WOHyperlink {
+	pageName = "TestListPage";
+}
+
+testBankCodeItem: WOString {value = knowtestbank.testBankCode;  };
+testBankNameItem: WOString {value = knowtestbank.testBankName;  };
+
+testVersionItem: WOString {value = knowtestbank.testVersion;  };
+versionDateItem: WOString {value = knowtestbank.versionDate; dateformat = "%m/%d/%Y"; };
+
+

@@ -1,0 +1,78 @@
+{
+    attributes = (
+        {
+            allowsNull = Y; 
+            columnName = testBankCode; 
+            externalType = char; 
+            name = testBankCode; 
+            valueClassName = NSString; 
+            width = 3; 
+        }, 
+        {
+            columnName = testBankId; 
+            externalType = int; 
+            name = testBankId; 
+            valueClassName = NSNumber; 
+            valueType = i; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = testBankName; 
+            externalType = varchar; 
+            name = testBankName; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 255; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = testVersion; 
+            externalType = char; 
+            name = testVersion; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 3; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = versionDate; 
+            externalType = date; 
+            name = versionDate; 
+            valueClassName = NSCalendarDate; 
+            valueType = D; 
+        }
+    ); 
+    attributesUsedForLocking = (testVersion, testBankId, testBankName, versionDate, testBankCode); 
+    className = KnowTestBank; 
+    classProperties = (
+        testVersion, 
+        testBankId, 
+        testBankName, 
+        versionDate, 
+        knowTestQuestions, 
+        testBankCode, 
+        knowTests
+    ); 
+    externalName = "Know_Test_Bank"; 
+    isReadOnly = Y; 
+    name = KnowTestBank; 
+    primaryKeyAttributes = (testBankId); 
+    relationships = (
+        {
+            destination = KnowTestQuestion; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = testBankId; sourceAttribute = testBankId; }); 
+            name = knowTestQuestions; 
+        }, 
+        {
+            destination = KnowTest; 
+            internalInfo = {"_nameInObjectStore" = knowtests; }; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = testBankCode; sourceAttribute = testBankCode; }); 
+            name = knowTests; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = (FetchAll); 
+}

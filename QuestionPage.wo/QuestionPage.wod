@@ -1,0 +1,29 @@
+DBWizardNext: WOImage {
+	filename = "DBWizardNext.gif";
+}
+
+DBWizardPrev: WOImage {
+	filename = "DBWizardPrev.gif";
+}
+
+FooterComponent1: FooterComponent {
+}
+
+HeaderComponent1: HeaderComponent {
+}
+
+Hyperlink1: WOHyperlink {
+	action = knowTestQuestionsDisplayGroup.selectNext;
+}
+
+Hyperlink2: WOHyperlink {
+	action = knowTestQuestionsDisplayGroup.selectPrevious;
+}
+
+Hyperlink3: WOHyperlink {
+	pageName = "Main";
+}
+
+QuestionViewComponent1: QuestionViewComponent {
+	question = knowTestQuestionsDisplayGroup.selectedObject;
+}

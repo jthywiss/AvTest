@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<wodefinitions>
+	<wo class="QuestionViewComponent" wocomponentcontent="false">
+
+		<binding name="question"/>
+
+		<validation message="&apos;question&apos; is a required binding">
+			<unbound name="question"/>
+		</validation>
+	</wo>
+</wodefinitions>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+		<meta name="generator" content="WebObjects 5.0">
+                <TITLE>KnowTestQuestions</TITLE>
+        </HEAD>
+<BODY BGCOLOR=#FFFFFF>
+<WEBOBJECT NAME=HeaderComponent1></WEBOBJECT><!-- Query By Example segment -->
+<CENTER>
+  <H2>Search for Test Questions</H2>
+  <BR>
+  Specify which Test Questions to display below:<BR>
+  <WEBOBJECT name=QueryForm>
+      Test Bank Name: <WEBOBJECT name=knowTest.testBankNameQueryField></WEBOBJECT> <BR>
+  Knowledge Code: <WEBOBJECT name=knowledgeCodeQueryField></WEBOBJECT> <BR>
+  Reference (document title): <WEBOBJECT name=knowledgeCodes.referenceQueryField></WEBOBJECT> <BR>
+  Question Number: <WEBOBJECT name=questionNumberQueryField></WEBOBJECT> <BR>
+  Question Text: <WEBOBJECT name=questionTextQueryField></WEBOBJECT> <BR>
+  Answer A Text: <WEBOBJECT name=answer1TextQueryField></WEBOBJECT> <BR>
+  Answer B Text: <WEBOBJECT name=answer2TextQueryField></WEBOBJECT> <BR>
+  Answer C Text: <WEBOBJECT name=answer3TextQueryField></WEBOBJECT> <BR>
+
+    <BR>
+    <WEBOBJECT name=ExecuteQuery></WEBOBJECT>
+  </WEBOBJECT >
+</CENTER>
+
+<!-- Table segment -->
+<TABLE border=1>
+  <TR>
+    <!-- One header cell per attribute -->
+    <TH>Test Bank Code</TH>
+    <TH>Question Number</TH>
+    <TH>Knowledge Code</TH>
+    <TH>Question Text</TH>
+
+  </TR>
+  <!-- Displayed objects segment -->
+  <WEBOBJECT name=DisplayList>
+    <TR>
+      <TD> <WEBOBJECT name=knowTest.testBankCodeItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT NAME=Hyperlink1><WEBOBJECT name=questionNumberItem></WEBOBJECT></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=knowledgeCodeItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=questionTextItem></WEBOBJECT> </TD>
+
+    </TR>
+  </WEBOBJECT>
+</TABLE><HR><A NAME=question><WEBOBJECT NAME=QuestionViewComponent1></WEBOBJECT></A><WEBOBJECT NAME=FooterComponent1></WEBOBJECT>
+
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+{
+    attributes = (
+        {
+            columnName = code; 
+            externalType = varchar; 
+            name = code; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 63; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = reference; 
+            externalType = varchar; 
+            name = reference; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 255; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = section; 
+            externalType = varchar; 
+            name = section; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 255; 
+        }, 
+        {
+            allowsNull = Y; 
+            columnName = subject; 
+            externalType = varchar; 
+            name = subject; 
+            valueClassName = NSString; 
+            valueType = c; 
+            width = 255; 
+        }
+    ); 
+    attributesUsedForLocking = (subject, reference, section, code); 
+    className = KnowledgeCode; 
+    classProperties = (subject, reference, section, knowTestQuestionss); 
+    externalName = "Knowledge_Code"; 
+    isReadOnly = Y; 
+    name = KnowledgeCode; 
+    primaryKeyAttributes = (code); 
+    relationships = (
+        {
+            deleteRule = EODeleteRuleDeny; 
+            destination = KnowTestQuestion; 
+            isToMany = Y; 
+            joinSemantic = EOInnerJoin; 
+            joins = ({destinationAttribute = knowledgeCode; sourceAttribute = code; }); 
+            name = knowTestQuestionss; 
+        }
+    ); 
+    sharedObjectFetchSpecificationNames = (FetchAll); 
+}

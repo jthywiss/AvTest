@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+	<HEAD>
+		<meta name="generator" content="WebObjects 5.0">
+                <TITLE>KnowTests</TITLE>
+        </HEAD>
+<BODY BGCOLOR=#FFFFFF>
+<WEBOBJECT NAME=HeaderComponent1></WEBOBJECT><!-- Title segment -->
+<CENTER>
+  <H2>All Knowledge Tests</H2>
+</CENTER>
+<BR>
+
+<!-- Table segment -->
+<TABLE border=1>
+  <TR>
+    <!-- One header cell per attribute -->
+    <TH>Test Name</TH>
+    <TH>Test Code</TH>
+    <TH># Qs</TH>
+    <TH>Time</TH>
+    <TH>Passing<BR>Score</TH>
+    <TH>Test Bank Code</TH>
+
+  </TR>
+  <!-- Displayed objects segment -->
+  <WEBOBJECT name=DisplayList>
+    <TR>
+      <TD> <WEBOBJECT name=testNameItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=testCodeItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=numberQuestionsItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=allottedTimeItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=passingScoreItem></WEBOBJECT> </TD>
+      <TD> <WEBOBJECT name=testBankCodeItem></WEBOBJECT> </TD>
+
+    </TR>
+  </WEBOBJECT>
+</TABLE><WEBOBJECT NAME=FooterComponent1></WEBOBJECT>
+
+</BODY>
+</HTML>
